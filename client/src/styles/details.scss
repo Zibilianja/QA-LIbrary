@@ -1,0 +1,367 @@
+$gray_background: rgb(60, 67, 75);
+$gray_letters: rgb(123, 127, 131);
+$teal_button: rgb(32, 145, 163);
+$book_brown: rgba(77, 63, 63, 0.63);
+
+.container {
+}
+
+//------------------------------------------------------------------
+//------------------------------------------------------------------
+.page__details {
+  width: 100%;
+  height: 100%;
+  margin-left: 2.5%;
+}
+//------------------------------------------------------------------
+//------------------------------------------------------------------
+//MAIN
+
+.main__detail {
+  margin-top: 4em;
+  width: 100%;
+  display: inline-flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  font-family: 'Times New Roman', Times, serif;
+  padding-top: 15px;
+  height: 50vh;
+  margin-left: auto;
+
+  .main__detailcard {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.2em;
+    padding: 15px;
+    display: inline-flex;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    height: fit-content;
+  }
+  .main__coverwrap {
+    height: fit-content;
+    width: 40vw;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    max-width: 500px;
+    align-content: center;
+
+    .book__title--mobile {
+      display: none;
+    }
+    .book__cover {
+      margin-top: 2em;
+      margin-bottom: auto;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+      height: auto;
+    }
+    .author__mobile {
+      display: none;
+    }
+    .book__stars {
+      margin-left: 24%;
+      margin-right: auto;
+      height: 55px;
+      width: 50%;
+      display: inline-flex;
+
+      .book__rating {
+        display: none;
+      }
+      .star__wrapper {
+        width: 250px;
+
+        margin-top: 20px;
+        display: flex;
+        margin-left: 1%;
+        margin-right: -1%;
+      }
+      .rating__radio {
+        display: none;
+      }
+      .form__rating {
+        width: 100%;
+        margin-left: 5px;
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+      }
+      .fa-star {
+        margin-left: 5px;
+        font-size: 20pt;
+      }
+    }
+  }
+  .book__details {
+    width: 45vw;
+    height: auto;
+    font-size: 14pt;
+    line-height: 130%;
+    margin-left: 7%;
+    margin-top: -1em;
+    padding-bottom: 5%;
+    color: $gray_background;
+
+    .book__title {
+      font-weight: lighter;
+    }
+    .book__author {
+      font-weight: lighter;
+    }
+  }
+  .main__btnwrap {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    margin: 33em auto 0 -5.5%;
+    bottom: 15%;
+  }
+  .shelf__link {
+    width: 30%;
+    max-width: 25em;
+    margin-left: 2%;
+    text-decoration: none;
+  }
+  .edit__link {
+    width: 30%;
+    max-width: 25em;
+    margin-right: 2%;
+    text-decoration: none;
+  }
+  .main__button {
+    height: 3em;
+    background-color: rgb(230, 230, 230);
+    width: 100%;
+    color: $gray_background;
+    font-size: 11pt;
+    border-radius: 7px;
+    margin: -35px 20px 0 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border: none;
+  }
+  .main__button:hover {
+    cursor: pointer;
+  }
+  .button--dark {
+    background-color: $gray_background;
+    color: white;
+  }
+  .delete__link {
+    text-decoration: none;
+    width: 135px;
+    display: inline-flex;
+    justify-content: center;
+    margin-left: 25px;
+  }
+  .delete__button {
+    background-color: transparent;
+    border: none;
+    height: fit-content;
+    width: fit-content;
+    right: 5%;
+    color: red;
+    font-size: 15pt;
+  }
+  .delete__button:hover {
+    color: rgb(244, 181, 181);
+  }
+}
+
+//------------------------------------------------------------------
+//------------------------------------------------------------------
+//BREAKPOINTS
+
+//Breakpoint for Md-laptop 769px - 1024px
+@media screen and (min-width: 769px) and (max-width: 1025px) {
+  .main__detail {
+    height: fit-content;
+    width: 100%;
+    font-size: 12pt;
+
+    .book__details {
+      margin-top: 1%;
+      margin-left: 0;
+    }
+  }
+  .delete__button {
+    margin-left: 10%;
+  }
+}
+
+//------------------------------------------------------------------
+//Breakpoint for Lg-desktop 1025px - 1200px
+@media screen and (min-width: 1025px) and (max-width: 2200px) {
+  .main__detail {
+    .book__details {
+      margin-left: -2%;
+      margin-top: 1%;
+    }
+    .delete__button {
+      margin-left: 10%;
+    }
+  }
+}
+
+//------------------------------------------------------------------
+//------------------------------------------------------------------
+//MOBILE
+
+//Breakpoint for Mobile 300px - 480px
+@media screen and (min-width: 0px) and (max-width: 769px) {
+  .page__details {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-bottom: -30px;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+  }
+
+  .main__detail {
+    padding: 0;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    height: auto;
+    overflow-y: scroll;
+    .main__detailcard {
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding: 0;
+      width: 90%;
+    }
+    .main__coverwrap {
+      width: 100vw;
+      height: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      text-align: center;
+
+      .book__title--mobile {
+        display: flex;
+        width: fit-content;
+        font-weight: lighter;
+        margin-right: auto;
+        margin-left: auto;
+      }
+      .book__cover {
+        height: auto;
+        width: 60%;
+        min-height: 0px;
+        max-height: 50vh;
+        max-width: 50vw;
+        min-width: 0px;
+        margin-left: 22.5%;
+      }
+      .author__mobile {
+        display: flex;
+        width: fit-content;
+        font-weight: lighter;
+        margin-right: auto;
+        margin-left: auto;
+      }
+      .book__stars {
+        background-color: white;
+        max-width: 85%;
+        min-width: 0px;
+        width: 95%;
+        margin: 1% auto 0 auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: fit-content;
+        text-align: center;
+
+        .book__rating {
+          display: flex;
+          margin-left: auto;
+          margin-right: auto;
+          text-align: center;
+          width: fit-content;
+          margin-top: 0;
+          margin-bottom: 15px;
+          font-weight: lighter;
+        }
+        .star__wrapper {
+          width: 100%;
+          display: inline-flex;
+        }
+        .fa-star {
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: auto;
+          margin-bottom: auto;
+          display: block;
+          width: 20%;
+        }
+        .star__rating {
+          font-size: 20pt;
+          height: auto;
+          width: 1em;
+        }
+      }
+    }
+    .book__details {
+      font-size: 12pt;
+      width: 100%;
+      margin-top: 2%;
+      text-align: center;
+      padding: 10px;
+      margin-left: auto;
+      margin-right: auto;
+      height: auto;
+      .book__title {
+        display: none;
+      }
+      .book__author {
+        display: none;
+      }
+    }
+    .main__btnwrap {
+      margin-top: 20%;
+      margin-bottom: 50px;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      position: relative;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .shelf__link {
+      width: 85vw;
+      margin: 0;
+      margin-top: 15px;
+      display: flex;
+      justify-content: center;
+    }
+    .edit__link {
+      width: 85vw;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+    .main__button {
+      width: 75%;
+      margin-bottom: 50px;
+    }
+    .button--dark {
+    }
+    .delete__button {
+      margin-left: -20%;
+    }
+  }
+} //media query mobile end bracket

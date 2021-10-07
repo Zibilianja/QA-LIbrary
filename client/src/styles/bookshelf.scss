@@ -1,0 +1,207 @@
+$gray_background: rgb(60, 67, 75);
+$gray_letters: rgb(123, 127, 131);
+$teal_button: rgb(32, 145, 163);
+$book_brown: rgba(77, 63, 63, 0.63);
+
+.page__bookshelf {
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+  font-size: 14;
+  font-weight: normal;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  width: 100vw;
+  border: 2px solid rgba(0, 0, 0, 0);
+  margin: 0 0 0 -3px;
+  padding: 0;
+  position: relative;
+  overflow-y: hidden;
+}
+
+.main__bookshelf {
+  margin-top: 4.8em;
+  width: 100%;
+  height: 85vh;
+  text-align: center;
+  overflow: hidden;
+
+  .clear__button {
+    position: absolute;
+    left: 5%;
+    top: 10%;
+    background-color: $gray_background;
+    color: white;
+    font-weight: bold;
+    padding: 9px;
+    border-radius: 5px;
+  }
+  .main__searchwrapper {
+    display: none;
+  }
+  .main__title {
+    font-weight: lighter;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+    color: $gray_background;
+    margin-bottom: 2%;
+  }
+  .main__gridcontainer {
+    margin-left: auto;
+    margin-right: auto;
+    height: 85%;
+    width: 82vw;
+    display: grid;
+    overflow-y: scroll;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    justify-content: space-evenly;
+    align-content: space-between;
+    margin-top: 5px;
+
+    .grid__items {
+      justify-items: center;
+      display: grid;
+      grid-template-rows: auto;
+      align-content: space-evenly;
+      height: 220px;
+      width: 162px;
+      border: 1px solid $gray_letters;
+      margin-bottom: 30px;
+      font-size: 12pt;
+      font-family: 'Times New Roman', Times, serif;
+      color: $gray_background;
+      .book__link {
+        text-decoration: none;
+        color: black;
+      }
+      .grid__bookcover {
+        margin-top: 8px;
+        height: 130px;
+        width: auto;
+      }
+      .grid__title {
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+      .grid__author {
+        font-size: 10pt;
+      }
+    }
+  }
+}
+
+//Scroll bar customs
+.main__gridcontainer::-webkit-scrollbar {
+  width: 8px;
+}
+
+.main__gridcontainer::-webkit-scrollbar-track {
+  border-radius: 5px;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  -webkit-box-shadow: inset 0 0 10px rgba(185, 185, 185, 0.3);
+}
+
+.main__gridcontainer::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  border: 10px solid $gray_background;
+  width: 15px;
+  background-color: rgb(121, 117, 117);
+  outline: 0 solid slategrey;
+}
+
+//Breakpoint for Md-laptop 769px - 1024px
+@media screen and (min-width: 500px) and (max-width: 1025px) {
+  .main__bookshelf {
+    height: 80vh;
+
+    .main__gridcontainer {
+      height: 90%;
+    }
+  }
+}
+
+//Breakpoint for Lg-desktop 1025px - 1200px
+@media screen and (min-width: 1025px) and (max-width: 2200px) {
+  .main__bookshelf {
+    height: 85vh;
+    .main__searchwrapper {
+      display: none;
+    }
+    .main__gridcontainer {
+      height: 90%;
+    }
+  }
+}
+
+//Breakpoint for Mobile 375px - 480px
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  // .body {
+  //     overflow: scroll;
+  //     margin-bottom: -30px;
+  //     position: relative;
+  //     min-height: 100vh;
+
+  // }
+
+  .main__bookshelf {
+    width: 100vw;
+    height: 82vh;
+    .clear__button {
+      position: absolute;
+      height: fit;
+      top: 85%;
+      left: none;
+      width: 18%;
+      min-width: 70px;
+    }
+    .main__searchwrapper {
+      width: 101vw;
+      height: 2em;
+      background-color: rgb(216, 215, 215);
+      margin-top: -24px;
+      padding-top: 12px;
+      padding-bottom: 2.5%;
+      display: flex;
+      position: absolute;
+    }
+    .main__title {
+      margin-top: 40px;
+      width: 85%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .main__form {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+    }
+    .main__search {
+      text-indent: 10pt;
+      width: 80%;
+      height: 82%;
+      border-radius: 5px;
+      border: none;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .search__button {
+      background-color: transparent;
+      border-color: transparent;
+    }
+    .main__searchimg {
+      height: 1.2em;
+      width: 1.2em;
+      position: absolute;
+      right: 12.5%;
+      justify-self: center;
+      margin-top: -10px;
+      margin-right: 4px;
+    }
+    .main__gridcontainer {
+      grid-template-columns: auto;
+      grid-template-rows: auto;
+    }
+  }
+}

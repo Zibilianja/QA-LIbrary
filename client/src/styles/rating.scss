@@ -1,0 +1,13 @@
+.rating__radio {
+  display: none;
+}
+.form__rating {
+  width: 100%;
+  margin-left: 5px;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+}
+.fa-star {
+  margin-left: 5px;
+  font-size: 20pt;
+}

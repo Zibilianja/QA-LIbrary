@@ -1,0 +1,41 @@
+{
+  "name": "fluidity-library-project-Zibilianja",
+  "version": "1.0.0",
+  "description": "## Instructions:",
+  "main": "index.js",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-regular-svg-icons": "^5.15.4",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.15",
+    "@parcel/transformer-sass": "^2.0.0-rc.0",
+    "axios": "^0.21.4",
+    "parcel": "^2.0.0-rc.0",
+    "parcel-bundler": "^1.12.5",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-icon": "^1.0.0",
+    "react-icons": "^4.2.0",
+    "react-router-dom": "^5.3.0",
+    "sass": "^1.39.0"
+  },
+  "devDependencies": {
+    "@parcel/transformer-image": "^2.0.0-rc.0",
+    "json-server": "^0.16.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TechtonicAcademy/fluidity-library-project-Zibilianja.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TechtonicAcademy/fluidity-library-project-Zibilianja/issues"
+  },
+  "homepage": "https://github.com/TechtonicAcademy/fluidity-library-project-Zibilianja#readme"
+}

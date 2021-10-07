@@ -1,0 +1,412 @@
+$gray_background: rgb(60, 67, 75);
+$gray_letters: rgb(123, 127, 131);
+$teal_button: rgb(32, 145, 163);
+$book_brown: rgba(77, 63, 63, 0.63);
+
+.edit__page {
+  width: 100%;
+}
+//------------------------------------------------------------------
+//------------------------------------------------------------------
+//MAIN
+
+.edit__main {
+  margin-top: 5em;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  .edit__title {
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: lighter;
+    font-family: 'Times New Roman', Times, serif;
+    color: $gray_background;
+  }
+
+  .edit__form {
+    display: grid;
+    grid-template-columns: auto auto;
+    height: 55vh;
+
+    .form__left {
+      width: 70vw;
+      display: inline-flex;
+      height: auto;
+      flex-wrap: wrap;
+      padding-top: 15px;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 14pt;
+      color: $gray_background;
+      justify-content: center;
+      text-align: center;
+      .form__wrappers {
+        width: 100%;
+        height: auto;
+        .form__labels {
+          margin-left: 8%;
+        }
+        .form__input {
+          width: 45vw;
+          float: right;
+          margin-right: 10%;
+          border-radius: 6px;
+          border: 1px solid $gray_letters;
+          height: 70%;
+        }
+        .form__synopsis {
+          height: 9em;
+          width: 45vw;
+          resize: none;
+          font-family: Arial, Helvetica, sans-serif;
+          line-height: 15pt;
+        }
+
+        .form__published {
+          height: 100%;
+          width: 50%;
+          margin-left: 9%;
+          text-indent: 10%;
+          font-size: 10pt;
+          margin-right: -20px;
+          float: right;
+        }
+        .form__pages {
+          height: 100%;
+          width: 50%;
+          float: right;
+          text-indent: 10%;
+          font-size: 12pt;
+        }
+        .form__rating {
+          width: 100%;
+        }
+        .label__rating {
+          margin-top: 1%;
+          width: 100%;
+        }
+        .form__rating {
+          margin-top: 2%;
+          width: 70%;
+          display: flex;
+          justify-content: space-evenly;
+          .star__rating {
+            font-size: 19pt;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .input__smaller {
+        height: 10%;
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      .wrappers__sidebyside {
+        height: 100%;
+        width: 45%;
+        display: block;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+      }
+      .published__wrapper {
+        margin-left: -8%;
+        width: 47%;
+      }
+      .pages__wrapper {
+        margin-right: -4%;
+        width: 50%;
+      }
+      .rating__wrapper {
+        height: 10%;
+        width: 75%;
+        display: inline-flex;
+        margin-top: -3%;
+        margin-left: -15%;
+        align-content: center;
+      }
+      .rating__radio {
+        display: none;
+      }
+      .form__rating {
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        float: right;
+      }
+      .fa-star {
+        margin-left: 5px;
+        font-size: 20pt;
+      }
+    }
+    .form__right {
+      width: 30vw;
+      align-content: center;
+      justify-content: center;
+
+      .image__frame {
+        height: 70%;
+        max-height: 550px;
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+
+        .book__cover {
+          height: auto;
+          width: 100%;
+          max-width: 300px;
+          max-height: 400px;
+        }
+      }
+      .image__upload {
+        margin-left: -2%;
+        margin-top: 2em;
+        height: 8%;
+        width: 80%;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        background-color: $gray_letters;
+        font-weight: bold;
+        font-size: 12pt;
+      }
+    }
+  }
+  .edit__btnwrap {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: absolute;
+    margin: 66vh 0 0 0;
+  }
+  .edit__button {
+    height: 3em;
+    background-color: rgb(230, 230, 230);
+    width: 30%;
+    color: $gray_background;
+    font-size: 11pt;
+    border-radius: 7px;
+    margin: -35px 20px 0 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border: none;
+  }
+  .button--dark {
+    background-color: $gray_background;
+    color: white;
+  }
+  .cancel__button--nav {
+    margin-top: -35px;
+    width: 30%;
+    height: 3em;
+  }
+  .cancel__button {
+    width: 100%;
+    height: 3em;
+    margin: 0;
+  }
+  .edit__button:hover {
+    color: gray;
+  }
+}
+
+//------------------------------------------------------------------
+//------------------------------------------------------------------
+//BREAKPOINTS
+
+//Breakpoint for Md-laptop 769px - 1024px
+@media screen and (min-width: 769px) and (max-width: 1025px) {
+}
+
+//------------------------------------------------------------------
+//Breakpoint for Lg-desktop 1025px - 1200px
+@media screen and (min-width: 1025px) and (max-width: 2200px) {
+}
+
+//------------------------------------------------------------------
+//------------------------------------------------------------------
+//MOBILE
+
+//Breakpoint for Mobile 300px - 480px
+@media screen and (min-width: 0px) and (max-width: 769px) {
+  .edit__page {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-bottom: -30px;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+  }
+
+  .edit__main {
+    height: 63.5em;
+    width: 101vw;
+    margin-top: 4em;
+    .edit__title {
+      margin-top: -0.1em;
+    }
+
+    .edit__form {
+      position: absolute;
+      margin-top: 3em;
+      width: 100vw;
+      height: 100vh;
+      .form__left {
+        width: 101vw;
+        height: 45em;
+        padding: 0;
+
+        justify-content: center;
+        text-align: center;
+
+        .author__wrapper {
+          position: absolute;
+          margin-top: 3.7em;
+        }
+        .synopsis__wrapper {
+          position: absolute;
+          margin-top: 23em;
+          width: 100%;
+        }
+        .form__wrappers {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          height: 2.5em;
+          width: 100%;
+          .form__labels {
+            width: 50vw;
+            margin-left: 0;
+          }
+          .form__input {
+            width: 90%;
+            margin: 5px 10px 0 0;
+
+            height: 70%;
+            text-indent: 10px;
+          }
+          .label__synopsis {
+          }
+          .form__synopsis {
+            height: 200%;
+            width: 100%;
+            letter-spacing: 1px;
+            margin-right: 0;
+          }
+
+          .form__published {
+            width: 35vw;
+            justify-self: center;
+            margin-right: 15%;
+          }
+          .form__pages {
+            width: 35vw;
+            margin-right: 1%;
+          }
+          .form__rating {
+          }
+          .label__rating {
+            margin: 0;
+          }
+          .form__rating {
+            width: 100%;
+            justify-content: center;
+            margin-left: -3px;
+
+            .star__rating {
+              margin: 0 3px 0 3px;
+            }
+          }
+        }
+
+        .input__smaller {
+          margin-top: 2em;
+          height: 10em;
+          display: flex;
+          justify-content: center;
+        }
+        .wrappers__sidebyside {
+          margin: 0 0 0 0;
+          width: 100%;
+        }
+        .published__wrapper {
+          position: absolute;
+          margin-top: 13.4em;
+          display: flex;
+          width: 80%;
+          height: 5%;
+        }
+        .pages__wrapper {
+          position: absolute;
+          margin-top: 17.4em;
+          display: flex;
+          width: 30%;
+        }
+        .rating__wrapper {
+          position: absolute;
+          margin-top: 42em;
+          display: flex;
+          flex-wrap: wrap;
+          margin-left: 0;
+        }
+      }
+      .form__right {
+        position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+        width: 80%;
+        height: 15em;
+        justify-content: center;
+        margin-left: 10%;
+        margin-top: 10em;
+        .image__frame {
+          width: 75%;
+          max-width: 200px;
+          height: fit-content;
+          margin: 0;
+          background-color: white;
+          .book__cover {
+            max-height: 240px;
+            width: 100%;
+            max-width: 170px;
+          }
+        }
+        .image__upload {
+          margin: 10px 0 0 0;
+          width: 75%;
+          height: 13%;
+        }
+      }
+    }
+    .edit__btnwrap {
+      margin-top: 54em;
+      display: flex;
+      flex-wrap: wrap;
+      height: 7em;
+    }
+    .edit__button {
+      width: 55%;
+      height: 33%;
+    }
+    .button--dark {
+    }
+    .cancel__button {
+      width: 55vw;
+      height: 100%;
+    }
+    .cancel__button--nav {
+      width: 55vw;
+      height: 33%;
+      margin-top: 1.5em;
+    }
+  }
+} //media query mobile end bracket

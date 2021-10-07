@@ -1,0 +1,173 @@
+body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.page {
+  height: 100%;
+  width: 100vw;
+  margin: -3.3em 0 0 0;
+  padding: 0;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Main Styling Landing Page*/
+.body {
+  font-size: 14;
+  font-weight: normal;
+  font-family: Arial, Helvetica, sans-serif;
+  max-height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.main {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  height: 100vw;
+  margin: 3.5em 0 0 auto;
+}
+.main a {
+  color: white;
+  text-decoration: none;
+}
+.main__div {
+  margin: 4em auto 0 auto;
+  width: 100%;
+  height: 100%;
+}
+.main__titlecontainer {
+  height: 44vh;
+  min-height: 280px;
+  width: 101%;
+  text-align: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background-image: url("/library2.149ed2b5.jpeg");
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 45%;
+  background-size: 100%;
+  max-width: 1050px;
+  margin-left: auto;
+  margin-right: auto;
+  top: -5px;
+  padding: 0;
+}
+.main__titleheadings {
+  margin-top: 120px;
+  width: 100%;
+  background-color: rgba(77, 63, 63, 0.63);
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+}
+.main__titleheading1 {
+  font-size: 45pt;
+  font-weight: bold;
+}
+.main__titleheading2 {
+  font-weight: lighter;
+  margin-top: -35px;
+}
+.main__descriptions {
+  width: 90%;
+  margin: 0.5em auto 0 auto;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 11pt;
+}
+.main .description__heading {
+  font-style: italic;
+  font-weight: lighter;
+}
+.main .main_paragraph {
+  text-align: left;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.main .description__button {
+  height: 30px;
+  width: 180px;
+  font-weight: bold;
+  font-size: 12pt;
+  border-radius: 5px;
+}
+.main .button--dark {
+  background-color: #343a40;
+  color: white;
+}
+
+@media screen and (min-width: 500px) and (max-width: 1025px) {
+  .main__titlecontainer {
+    height: 42vh;
+    width: 100%;
+    overflow: hidden;
+  }
+  .main__titleheadings {
+    margin-top: 15%;
+  }
+}
+@media screen and (min-width: 1025px) and (max-width: 2200px) {
+  .body {
+    justify-content: center;
+  }
+
+  .main {
+    width: 100vw;
+    margin-left: -7px;
+  }
+  .main__titlecontainer {
+    background-position-y: 40%;
+  }
+  .main__titleheadings {
+    margin-top: 15%;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .page {
+    height: fit-content;
+    width: 100%;
+    padding: 0;
+    margin-left: -10px;
+  }
+
+  .main {
+    width: 100vw;
+    display: flex;
+  }
+  .main__titlecontainer {
+    min-width: 102vw;
+    justify-content: center;
+    height: 33%;
+    margin-top: -8%;
+    margin-left: 5px;
+    background-size: 150%;
+  }
+  .main__titleheadings {
+    margin-top: 15%;
+    width: 100%;
+  }
+  .main__descriptions {
+    padding-bottom: 100px;
+    margin-left: 8%;
+  }
+}
+
+/*# sourceMappingURL=/styles.c0e7e7f1.css.map */
