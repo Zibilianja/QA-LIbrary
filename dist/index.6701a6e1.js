@@ -28336,7 +28336,7 @@ const Home = ()=>{
                             __self: undefined,
                             children: [
                                 /*#__PURE__*/ _jsxRuntime.jsx("h1", {
-                                    className: " main__titleheading1",
+                                    className: "main__titleheading1",
                                     __source: {
                                         fileName: "src/pages/Home.jsx",
                                         lineNumber: 15
@@ -28345,7 +28345,7 @@ const Home = ()=>{
                                     children: "Books."
                                 }),
                                 /*#__PURE__*/ _jsxRuntime.jsx("h2", {
-                                    className: " main__titleheading2",
+                                    className: "main__titleheading2",
                                     __source: {
                                         fileName: "src/pages/Home.jsx",
                                         lineNumber: 16
