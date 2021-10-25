@@ -99,7 +99,9 @@
 						"exec": [
 							"pm.test(\"Successful POST request\", function () {",
 							"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);",
-							"});"
+							"});",
+							"",
+							"setTimeout(() => {}, 2000)"
 						],
 						"type": "text/javascript"
 					}
@@ -159,7 +161,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/books/?id=133",
+					"raw": "http://localhost:3000/books/133",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -167,13 +169,7 @@
 					"port": "3000",
 					"path": [
 						"books",
-						""
-					],
-					"query": [
-						{
-							"key": "id",
-							"value": "133"
-						}
+						"133"
 					]
 				}
 			},
