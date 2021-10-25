@@ -6,15 +6,31 @@
 	},
 	"item": [
 		{
-			"name": "http://localhost:3000/books",
+			"name": "Get all books",
 			"event": [
 				{
 					"listen": "test",
 					"script": {
 						"exec": [
+							"const response = pm.response.json();",
+							"",
 							"pm.test(\"Status code is 200\", function () {",
+							"    ",
 							"    pm.response.to.have.status(200);",
-							"});"
+							"    ",
+							"});",
+							"",
+							"pm.test(\"First title is Sorcerer's Stone - Last is Deathly Hallows\", function () {",
+							"    pm.expect(response[0].title).to.eql(\"Harry Potter and The Sorcerer's Stone\");",
+							"    pm.expect(response[6].title).to.eql(\"Harry Potter and The Deathly Hallows\")",
+							"})",
+							"",
+							"pm.test(\"Response is array containing 7 items\", function () {",
+							"    pm.expect(response.length).to.eql(7);",
+							"})",
+							"",
+							"",
+							""
 						],
 						"type": "text/javascript"
 					}
@@ -36,21 +52,22 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/books",
+					"raw": "http://localhost:3000/books/",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
-						"books"
+						"books",
+						""
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "http://localhost:3000/books/123",
+			"name": "Get book by ID",
 			"event": [
 				{
 					"listen": "test",
@@ -59,8 +76,15 @@
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
 							"});",
+							"const response = pm.response.json();",
 							"",
-							""
+							"pm.test(\"Title is correct\", function () {",
+							"    pm.expect(response[0].title).to.eql(\"Harry Potter and The Prisoner of Azkaban\");",
+							"})",
+							"",
+							"pm.test(\"Response is 1 book\", function () {",
+							"    pm.expect(response.length).to.eql(1);",
+							"})"
 						],
 						"type": "text/javascript"
 					}
@@ -91,7 +115,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:3000/books",
+			"name": "Add Book",
 			"event": [
 				{
 					"listen": "test",
@@ -101,7 +125,8 @@
 							"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);",
 							"});",
 							"",
-							"setTimeout(() => {}, 2000)"
+							"setTimeout(() => {}, 2000)",
+							""
 						],
 						"type": "text/javascript"
 					}
@@ -134,7 +159,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:3000/books/133",
+			"name": "Edit book details",
 			"event": [
 				{
 					"listen": "test",
@@ -176,7 +201,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:3000/books/133",
+			"name": "Delete book",
 			"event": [
 				{
 					"listen": "test",
@@ -209,7 +234,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:3000/books/?query=harry",
+			"name": "Get book by search query",
 			"event": [
 				{
 					"listen": "test",
