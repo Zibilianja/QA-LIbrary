@@ -64,7 +64,7 @@ const Bookshelf = () => {
         <h2 className="main__title">Release the Kraken of Knowledge!</h2>
         <section className="main__gridcontainer">
           {books.map(({ id, title, image, author }, i) => (
-            <div className="grid__items">
+            <div className={`grid__items item__${i}`}>
               <Link to={'/bookdetails/' + id} className="book__link">
                 <img className="grid__bookcover" src={coversObject[image]} />
                 <div className="grid__title">{title}</div>

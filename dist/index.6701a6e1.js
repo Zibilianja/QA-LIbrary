@@ -28156,7 +28156,7 @@ const Bookshelf = ()=>{
                     },
                     __self: undefined,
                     children: books.map(({ id , title , image , author  }, i)=>/*#__PURE__*/ _jsxRuntime.jsx("div", {
-                            className: "grid__items",
+                            className: `grid__items item__${i}`,
                             __source: {
                                 fileName: "src/pages/Bookshelf.jsx",
                                 lineNumber: 67
@@ -28735,7 +28735,7 @@ const Addbook = ()=>{
                                                         children: [
                                                             /*#__PURE__*/ _jsxRuntime.jsx("input", {
                                                                 type: "radio",
-                                                                className: "rating__radio",
+                                                                className: `rating__radio radio__${ratingValue}`,
                                                                 value: ratingValue,
                                                                 display: "hidden",
                                                                 onClick: ()=>setRating(ratingValue)
@@ -28747,7 +28747,7 @@ const Addbook = ()=>{
                                                                 __self: undefined
                                                             }),
                                                             /*#__PURE__*/ _jsxRuntime.jsx(_fa.FaStar, {
-                                                                className: "fa fa-star star__rating",
+                                                                className: `fa fa-star star__rating rating__${ratingValue}`,
                                                                 color: ratingValue <= (hover || rating) ? 'gold' : 'grey',
                                                                 onMouseEnter: ()=>setHover(ratingValue)
                                                                 ,
@@ -28813,7 +28813,7 @@ const Addbook = ()=>{
                             children: [
                                 /*#__PURE__*/ _jsxRuntime.jsx("button", {
                                     type: "submit",
-                                    className: "addbook__button button--dark",
+                                    className: "addbook__button submit__button button--dark",
                                     __source: {
                                         fileName: "src/pages/Addbook.jsx",
                                         lineNumber: 139
@@ -57867,7 +57867,7 @@ const Editbook = ()=>{
                                                             /*#__PURE__*/ _jsxRuntime.jsx("input", {
                                                                 id: "rating",
                                                                 type: "radio",
-                                                                className: "rating__radio",
+                                                                className: `rating__radio radio__${ratingValue}`,
                                                                 value: ratingValue,
                                                                 display: "hidden",
                                                                 onClick: ()=>setRating(ratingValue)
@@ -57881,7 +57881,7 @@ const Editbook = ()=>{
                                                                 __self: undefined
                                                             }),
                                                             /*#__PURE__*/ _jsxRuntime.jsx(_fa.FaStar, {
-                                                                className: "fa fa-star star__rating",
+                                                                className: `fa fa-star star__rating rating__${ratingValue}`,
                                                                 color: ratingValue <= (hover || rating) ? 'gold' : 'grey',
                                                                 onMouseEnter: ()=>setHover(ratingValue)
                                                                 ,
@@ -57948,7 +57948,7 @@ const Editbook = ()=>{
                             children: [
                                 /*#__PURE__*/ _jsxRuntime.jsx("button", {
                                     type: "submit",
-                                    className: "edit__button button--dark",
+                                    className: "edit__button submit__button button--dark",
                                     __source: {
                                         fileName: "src/pages/Editbook.jsx",
                                         lineNumber: 169

@@ -137,7 +137,7 @@ const Editbook = () => {
                         <input
                           id="rating"
                           type="radio"
-                          className="rating__radio"
+                          className={`rating__radio radio__${ratingValue}`}
                           value={ratingValue}
                           display="hidden"
                           onClick={() => setRating(ratingValue)}
@@ -145,7 +145,7 @@ const Editbook = () => {
                           onChange={inputChange}
                         />
                         <FaStar
-                          className="fa fa-star star__rating"
+                          className={`fa fa-star star__rating rating__${ratingValue}`}
                           color={
                             ratingValue <= (hover || rating) ? 'gold' : 'grey'
                           }
@@ -166,7 +166,7 @@ const Editbook = () => {
             <button className="image__upload">Change Image</button>
           </div>
           <div className="edit__btnwrap">
-            <button type="submit" className="edit__button button--dark">
+            <button type="submit" className="edit__button submit__button button--dark">
               Submit
             </button>
             <Link to="/bookshelf" className="cancel__button--nav">

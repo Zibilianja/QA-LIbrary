@@ -109,13 +109,13 @@ const Addbook = () => {
                       <label>
                         <input
                           type="radio"
-                          className="rating__radio"
+                          className={`rating__radio radio__${ratingValue}`}
                           value={ratingValue}
                           display="hidden"
                           onClick={() => setRating(ratingValue)}
                         />
                         <FaStar
-                          className="fa fa-star star__rating"
+                          className={`fa fa-star star__rating rating__${ratingValue}`}
                           color={
                             ratingValue <= (hover || rating) ? 'gold' : 'grey'
                           }
@@ -136,7 +136,7 @@ const Addbook = () => {
             <button className="image__upload">Add Image</button>
           </div>
           <div className="addbook__btnwrap">
-            <button type="submit" className="addbook__button button--dark">
+            <button type="submit" className="addbook__button submit__button button--dark">
               Add Book
             </button>
             <button className="addbook__button" type="reset">
