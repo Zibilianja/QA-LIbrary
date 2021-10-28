@@ -1,5 +1,5 @@
 describe("5_End_to_end_CRUD", () => {
-    
+
   //ADD ADD ADD
 
   it("Navigate_to_addbook_page", () => {
@@ -39,6 +39,10 @@ describe("5_End_to_end_CRUD", () => {
   it("Fill_rating_check_value", () => {
     cy.get(".rating__3").click();
     cy.get(".radio__3").should("be.checked");
+    cy.get(".radio__5").should("not.be.checked")
+    cy.get(".radio__4").should("not.be.checked")
+    cy.get(".radio__2").should("not.be.checked")
+    cy.get(".radio__1").should("not.be.checked")
   });
   it("Submit_form_redirect_bookshelf", () => {
     cy.get(".submit__button").click();
@@ -107,6 +111,10 @@ describe("5_End_to_end_CRUD", () => {
   it("Fill_rating_check_value", () => {
     cy.get(".rating__5").click();
     cy.get(".radio__5").should("be.checked");
+    cy.get(".radio__1").should("not.be.checked");
+    cy.get(".radio__2").should("not.be.checked");
+    cy.get(".radio__3").should("not.be.checked");
+    cy.get(".radio__4").should("not.be.checked");
   });
   it("Submit_form_redirect_bookshelf", () => {
     cy.get(".submit__button").click();
