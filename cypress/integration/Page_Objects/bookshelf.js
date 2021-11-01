@@ -1,0 +1,31 @@
+class BookShelf {
+
+    navigate = () => {
+        return cy.visit('http://localhost:1234/bookshelf')
+    }
+
+    getMainTitle = () => {
+        return cy.get(".main__title")
+    }
+
+    getGridTitle = () => {
+        return cy.get(".grid__title", { timeout: 10000 })
+    }
+    getGridAuthor = () => {
+        return cy.get(".grid__author", { timeout: 10000})
+    }
+
+    getClearButton = () => {
+        return cy.get(".clear__button")
+    }
+    getMobileSearch = () => {
+        return cy.get(".main__searchwrapper")
+    }
+    mobileSearchInput = () => {
+        return cy.get(".main__search")
+    }
+    mobileSearchBtn = () => {
+        return cy.get(".main__searchimg")
+    }
+}
+export { BookShelf };
