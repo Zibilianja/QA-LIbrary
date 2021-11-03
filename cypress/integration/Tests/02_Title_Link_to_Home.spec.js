@@ -10,11 +10,11 @@ describe("2_validate_Title_Link_To_Home", () => {
   it("Navigate_bookshelf", () => {
     bookshelf.navigate();
     cy.url().should("include", "bookshelf");
-    bookshelf.getMainTitle().should("be.visible");
+    bookshelf.validateBookshelf();
   });
   it("Bookshelf__Click__Title__Link", () => {
     header.getHeaderTitle().click();
     cy.url().should("eq", "http://localhost:1234/");
-    homepage.getMainTitleHeading().should("be.visible");
+    homepage.validateHomePage();
   });
 });

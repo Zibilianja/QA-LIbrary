@@ -9,29 +9,29 @@ describe("1_validate_bookshelf_links", () => {
 
   it("Navigate_home", () => {
     homepage.navigate();
-    homepage.getMainTitleHeading().should("be.visible");
+    homepage.validateHomePage();
   });
   it("Home_Header_Nav_Link", () => {
     header.getBookshelfLink().click();
     cy.url().should("include", "bookshelf");
-    bookshelf.getMainTitle().should("be.visible");
+    bookshelf.validateBookshelf();
   });
   it("Navigate_home", () => {
     homepage.navigate();
-    homepage.getMainTitleHeading().should("be.visible");
+    homepage.validateHomePage();
   });
   it("Home_Main_Button", () => {
     homepage.getSeeBooksButton().click();
     cy.url().should("include", "bookshelf");
-    bookshelf.getMainTitle().should("be.visible");
+    bookshelf.validateBookshelf();
   });
   it("Navigate_home", () => {
     homepage.navigate();
-    homepage.getMainTitleHeading().should("be.visible");
+    homepage.validateHomePage();
   });
   it("AddBook_Nav_Link", () => {
     header.getBookshelfLink().click();
     cy.url().should("include", "bookshelf");
-    bookshelf.getMainTitle().should("be.visible");
+    bookshelf.validateBookshelf();
   });
 });

@@ -24,5 +24,10 @@ class Header {
   getDropContent = () => {
     return cy.get(".dropdown__content");
   };
+  searchAndSubmit = (query) => {
+    this.getSearchInput().type(query).should("have.value", query);
+    this.getSearchButton().click()
+    cy.wait(200).url().should("include", "filtered")
+  }
 }
 export { Header };

@@ -8,5 +8,14 @@ class BookDetails {
     getDeleteButton = () => {
         return cy.get(".delete__button")
     }
+    deleteBook = () => {
+        this.getDeleteButton().click()
+    }
+    validateCorrectBook = (title) => {
+        this.getBookTitle().should("contain", title)
+    }
+    getTitle = (title) => {
+        this.getBookTitle().contains(title)
+    }
 }
 export { BookDetails }

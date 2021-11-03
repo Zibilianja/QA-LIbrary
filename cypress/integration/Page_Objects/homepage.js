@@ -15,5 +15,9 @@ class HomePage {
         return cy.visit('http://localhost:1234/');
     }
 
+    validateHomePage = () => {
+        return this.getMainTitleHeading().should("be.visible")
+    }
+
 }
 export { HomePage };

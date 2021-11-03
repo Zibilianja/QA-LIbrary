@@ -13,7 +13,7 @@ const header = new Header();
 
       it("Navigate_home_mobile", () => {
         home.navigate();
-        home.getMainTitleHeading().should("be.visible");
+        home.validateHomePage();
       });
       it("click_drop_down_open", () => {
         header.getMobileMenu().click();
