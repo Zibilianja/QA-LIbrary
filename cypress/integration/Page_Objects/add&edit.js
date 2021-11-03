@@ -52,11 +52,10 @@ class AddEdit {
       .should("have.value", data.published);
     this.getPagesInput().type(data.pages).should("have.value", data.pages);
     this.getRating(data.rating).click();
-    this.getRadio(data.rating).should("be.checked");
     let ratingArray = [1, 2, 3, 4, 5];
     for (let i = 0; i < ratingArray.length; i++) {
       if (ratingArray[i] == data.rating) {
-        continue;
+        this.getRadio(data.rating).should("be.checked");
       } else {
         this.getRadio(ratingArray[i]).should("not.be.checked");
       }
