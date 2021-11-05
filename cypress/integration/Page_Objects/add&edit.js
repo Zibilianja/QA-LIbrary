@@ -1,6 +1,6 @@
 class AddEdit {
   navigateAddBook = () => {
-    return cy.visit("http://localhost:1234/addbook");
+    return cy.visit("/addbook");
   };
   getAddBookTitle = () => {
     return cy.get(".addbook__title");

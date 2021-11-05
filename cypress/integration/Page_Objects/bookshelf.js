@@ -1,7 +1,7 @@
 class BookShelf {
 
     navigate = () => {
-        return cy.visit('http://localhost:1234/bookshelf')
+        return cy.visit('/bookshelf')
     }
 
     getMainTitle = () => {

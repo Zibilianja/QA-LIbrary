@@ -12,7 +12,7 @@ class HomePage {
     }
 
     navigate = () => {
-        return cy.visit('http://localhost:1234/');
+        return cy.visit("");
     }
 
     validateHomePage = () => {
